@@ -1,0 +1,9 @@
+config ZMK_LAYER_OVERLAY_REPORT
+    bool "Report the active ZMK layer over the USB console for the layer-overlay companion app"
+    default y
+    depends on ZMK_USB_LOGGING
+    help
+      When enabled, prints a line like "ZMKLAYER:2" to the USB CDC-ACM
+      console every time the active (highest) layer changes. Intended
+      to be read by a host-side program that draws an on-screen overlay
+      of the keymap.

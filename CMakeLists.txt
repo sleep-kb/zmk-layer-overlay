@@ -1,2 +1,1 @@
-zephyr_library()
-zephyr_library_sources_ifdef(CONFIG_ZMK_LAYER_OVERLAY_REPORT src/layer_report.c)
+target_sources_ifdef(CONFIG_ZMK_LAYER_OVERLAY_REPORT app PRIVATE src/layer_report.c)
